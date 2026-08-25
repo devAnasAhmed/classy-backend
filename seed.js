@@ -1,6 +1,6 @@
 // Seed initial data
 require('dotenv').config();
-const mongoose = require('mongoose');
+const connectDB = require('./config/db');
 const bcrypt = require('bcryptjs');
 const User = require('./models/User');
 const Category = require('./models/Category');
@@ -8,8 +8,7 @@ const Product = require('./models/Product');
 
 const seed = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/classy');
-    console.log('Connected to MongoDB');
+    await connectDB();
 
     // Clear existing
     await User.deleteMany();
