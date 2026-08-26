@@ -20,6 +20,7 @@ const corsOptions = {
       process.env.ADMIN_URL || 'http://localhost:5500',
       'https://classy-shop.netlify.app',
       'https://classy-admin.netlify.app',
+      'https://classy-frontend-8swt.vercel.app',
       undefined // allow Postman / curl
     ];
     if (!origin || allowedOrigins.includes(origin)) {
