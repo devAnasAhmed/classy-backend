@@ -15,14 +15,14 @@ const app = express();
 // CORS Config
 const corsOptions = {
   origin: function (origin, callback) {
-    const allowedOrigins = [
-      process.env.FRONTEND_URL || 'http://localhost:3000',
-      process.env.ADMIN_URL || 'http://localhost:5500',
-      'https://classy-shop.netlify.app',
-      'https://classy-admin.netlify.app',
-      'https://classy-frontend-8swt.vercel.app',
-      undefined // allow Postman / curl
-    ];
+   const allowedOrigins = [
+  process.env.FRONTEND_URL || 'http://localhost:3000',
+  process.env.ADMIN_URL || 'http://localhost:5500',
+  'https://classy-shop.netlify.app',
+  'https://classy-admin.netlify.app',
+  'https://classy-frontend-8swt.vercel.app',
+  undefined
+];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
