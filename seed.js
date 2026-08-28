@@ -17,7 +17,7 @@ const seed = async () => {
 
     // Create admin user
     const admin = await User.create({
-      name: 'أنس',
+      name: 'أرانيا',
       email: process.env.ADMIN_EMAIL || 'admin@classy.com',
       password: process.env.ADMIN_PASSWORD || 'admin123',
       role: 'admin'
@@ -58,7 +58,7 @@ const seed = async () => {
         rating: 4.7, reviews: 28, tags: ['نوتة', 'فن', 'Van Gogh']
       },
       {
-        name: 'تغريسة تخرج Senior',
+        name: 'استيكر تخرج Senior',
         description: 'تغريسة خشبية مخصصة بصورة الطالب وعبارة Senior.',
         price: 60, stock: 50, category: 'تغريسات تخرج',
         image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=400&fit=crop',
